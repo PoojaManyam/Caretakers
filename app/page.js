@@ -23,7 +23,7 @@ function CaretakersPage() {
   }, []);
 
   useEffect(() => {
-    setErrorShown(false); // Reset errorShown when selectedNurseryId changes
+    setErrorShown(false);
   }, [selectedNurseryId]);
 
   const fetchNurseryIds = () => {
@@ -124,7 +124,7 @@ function CaretakersPage() {
       ))
     } <
     /select> < /
-    div > <
+  div > <
     div className = "caretakers-grid" > {
       displayCaretakersByNursery(selectedNurseryId).map((caretaker) => ( <
         div key = {
@@ -191,8 +191,7 @@ function CaretakersPage() {
       selectedCaretaker.nursery.nurseryId
     } < /p> < /
     div > <
-    /div> < /
-    >
+    /div> < / >
   )
 } <
 /div>
