@@ -38,6 +38,33 @@ function CaretakersPage() {
       });
   };
 
+  /*   using the mapping function
+  const fetchCaretakersData = () => {
+    const endpoint = selectedNurseryId === "All" ? "/caretakers" : `/byNursery/${selectedNurseryId}`;
+
+    fetch(`http://localhost:8080${endpoint}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setCaretakersData(data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching caretakers:", error);
+        if (!errorShown) {
+          toast.error("Failed to fetch caretakers data.");
+          setErrorShown(true);
+        }
+      });
+  };
+
+  */
+
+
   const fetchCaretakersData = () => {
     fetch("http://localhost:8080/caretakers")
       .then((response) => {
