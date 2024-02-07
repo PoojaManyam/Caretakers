@@ -1,5 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "../css/animate.css";
+
+// Corrected import path using forward slashes
+import "../vendor/fontawesome/css/font-awesome.min.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

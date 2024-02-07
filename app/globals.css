@@ -1,109 +1,225 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,700,800|Roboto:400,500,700,900");
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Nunito', sans-serif;
-  background-image: linear-gradient(to right, #FC766AFF, #5B84B1FF);
-  color: #ffffff;
+  @apply font-light text-[#666] bg-[#3931af] text-base leading-[1.6em] overflow-x-hidden mb-0 overflow-x-hidden mb-0;
+  font-family: "Open Sans", sans-serif;
+
+  @apply font-light bg-indigo-800 text-base overflow-x-hidden mb-0;
+}
+h1,h2,h3,h4,h5,h6 {
+  @apply font-normal text-[#444] leading-[1em] mt-0 mb-[30px] mx-0 text-[32px];
+  font-family: "Roboto", sans-serif;
 }
 
-.container {
-  width: 80%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-  text-align: center;
+p {
+  @apply mt-0 mb-5 mx-0;
+}
+a {
+  @apply text-[#666];
+}
+a:hover,
+a:focus {
+  @apply no-underline;
 }
 
-.caretakers-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 30px;
-  padding: 20px;
-
+/* Testimonial */
+.block-text {
+  @apply bg-white rounded mt-0 mb-10 mx-0 px-[18px] py-[15px];
 }
-
-.caretaker-container {
-  border-radius: 40px;
-  height: 120px;
-  padding: 16px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(60px);
-
+.block-text a {
+  @apply text-xl font-semibold no-underline;
 }
-
-.caretaker-container:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+.mark {
+  @apply font-semibold px-0 py-3;
+  background: none;
 }
-
-.caretaker-info {
-  margin-bottom: 8px;
+.block-text p {
+  @apply text-[#585858];
 }
-
-.caretaker-info p {
-  margin: 4px 0;
+.sprite-i-triangle {
+  @apply bg-[0_-1298px] h-11 w-[50px] shadow-none;
 }
-
-.nursery-dropdown {
-  margin-bottom: 16px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 16px;
-  background-color: rgba(248, 252, 253, 0.2);
-  padding: 8px;
-  border-radius: 8px;
-  border: none;
-  color: rgb(5, 21, 24);
-  font-size: 16px;
-  text-align: center;
+.block-text ins {
+  @apply ml-[-60px] left-2/4 -bottom-11;
 }
-
-.popup-container {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
-  width: 60%;
-  max-width: 600px;
-  padding: 20px;
-  border-radius: 8px;
-  z-index: 999;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(30px);
-  text-align: center;
-
+.block-text p {
+    color: #585858;
 }
-
-.popup-content {
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px); /* Card background color */
-  padding: 20px;
-  border-radius: 8px;
-  color: #ffffff;
-  backdrop-filter: blur(90px); /* Card background blur */
+.zmin {
+  @apply z-[1];
 }
-
-.close-button {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  font-size: 20px;
-  cursor: pointer;
-  color: #ffffff;
+.ab {
+  @apply absolute;
 }
-
-.caretakers-page-container {
-  position: relative;
+.person-text {
+  @apply text-center z-[2] pt-2.5 pb-0 px-0;
 }
-
-.dropdown-container {
-  margin-bottom: 20px;
-  margin-top: 20px;
-  margin-left: 550px;
+.person-text a {
+  @apply block text-white font-semibold mt-2.5;
+}
+.rel {
+  @apply relative;
+}
+.person-text img.person {
+  @apply w-[200px] h-[200px] mx-auto my-0;
+}
+.company-social {
+  @apply ml-0 mt-2.5 pl-0 text-left;
+}
+.company-social {
+  list-style: none;
+}
+.company-social li {
+  @apply inline-block m-0 p-0;
+}
+.company-social a {
+  @apply ml-0 mr-0.5 my-0 hover:text-white;
+}
+.company-social a i {
+  @apply w-10 h-10 leading-10 text-center text-white transition-[background] duration-[0.3s] ease-[ease-in-out] text-center p-0 rounded-[3px];
+  -webkit-transition: background 0.3s ease-in-out;
+}
+.company-social .social-facebook a i {
+  background: #3873ae;
+}
+.company-social .social-twitter a i {
+  background: #62c6f8;
+}
+.company-social .social-dribble a i {
+  background: #d74980;
+}
+.company-social .social-deviantart a i {
+  background: #8da356;
+}
+.company-social .social-google a i {
+  background: #000;
+}
+.company-social .social-vimeo a i {
+  background: #51a6d3;
+}
+.company-social .social-facebook a:hover i {
+  background: #4893ce;
+}
+.company-social .social-twitter a:hover i {
+  background: #82e6ff;
+}
+.company-social .social-dribble a:hover i {
+  background: #f769a0;
+}
+.company-social .social-deviantart a:hover i {
+  background: #adc376;
+}
+.company-social .social-google a:hover i {
+  background: #333;
+}
+.company-social .social-vimeo a:hover i {
+  background: #71c6f3;
+}
+body {
+  background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+}
+.contact-form {
+  @apply w-[70%] ml-[15%] mt-[35%] mb-[5%] pb-0 rounded-[5px];
+  background: #fff;
+}
+.contact-form .form-control {
+  @apply rounded-[1_rem];
+}
+.contact-image {
+  @apply text-center;
+}
+.contact-image img {
+  @apply w-[11%] mt-[-4%] rotate-[29deg] rounded-[6rem] max-w-full;
+}
+.contact-form form {
+  @apply p-[14%] rounded-[0%];
+}
+.contact-form form .row {
+  @apply mb-[-7%];
+}
+.row .form-groups {
+  @apply mr-[325px] mt-[60px] mb-0;
+}
+.contact-form h3 {
+  @apply mt-[-13%] text-center text-[#495057] mb-[8%];
+}
+.contact-form .btnContact {
+  @apply w-[90%] font-semibold text-white cursor-pointer text-[15px] p-[5%] rounded-2xl border-[none];
+  background: #0062cc;
+}
+.btnContactSubmit {
+  @apply w-2/5 text-white bg-[#0062cc] cursor-pointer mt-[200px] p-[1.5%] rounded-2xl border-[none];
+}
+.btnContact {
+  @apply ml-[70%] bg-[#0062cc] text-[white] cursor-pointer px-5 py-2.5 rounded-sm border-[none] hover:bg-[#0099cc] bg-[#007bff] text-white cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.1)] mt-1 mb-0 px-5 py-2.5 rounded-lg border-[none] hover:bg-[#0056b3];
+}
+.contact-form {
+  background: #f8f9fa;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+  @apply no-underline bg-[#251f1f00];
+}
+.btn-skin {
+  @apply bg-[#0062cc] border-[#0062cc];
+}
+.box h4 {
+  @apply text-2xl text-black;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.box p {
+  @apply text-base text-black;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.service-desc h5 {
+  @apply text-black mb-[5px];
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.intro-content {
+  @apply pt-[200px] pb-[60px] px-0 text-[rgb(144,172,202)] pl-[500px] pt-[15px] pb-[30px];
+  background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+}
+.box-container {
+  @apply bg-white w-[calc(33.33%_-_20px)] float-left box-border mr-5 mb-2.5 p-2.5 rounded-[30px];
+}
+.box-container:nth-child(3n) {
+  @apply clear-both mr-0;
+}
+.blur-icon.bg-skin {
+  @apply text-[#0062cc] mb-[25px];
+}
+.intro {
+  @apply text-[white] mb-0;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.home-section {
+  @apply text-[white];
+  background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.white-bg {
+  @apply bg-[white];
+}
+.blur-icon {
+  @apply text-white;
+}
+.box {
+  @apply p-[30px];
+}
+.contact-form {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+footer .widget {
+  @apply text-[black] mb-0;
+}
+.form-control {
+  @apply w-[250px] h-5 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] mt-2.5 p-2 rounded-lg border-2 border-solid border-[#ced4da];
+}
+.btnContact {
+    background-color: #007bff; 
+}
+.btnContact:hover {
+    background-color: #0099cc;
+}
+.about-us-section {
+  @apply bg-[rgba(0,0,0,0.5)] shadow-[0_0_10px_rgba(0,0,0,0.5)] text-[white] text-center p-5 rounded-[10px];
 }
